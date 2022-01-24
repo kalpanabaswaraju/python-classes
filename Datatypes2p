@@ -1,0 +1,506 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "acc2facc",
+   "metadata": {},
+   "source": [
+    "# Identifiers and Datatypes\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "563ec3f0",
+   "metadata": {},
+   "source": [
+    "#Any name in python program is known as Identifier\n",
+    "#It includes classname , function name and variable name\n",
+    "#Rules of an identifier:\n",
+    "#Only these character we can use\n",
+    "1:Only alphabets  either in uppercase or in lower case.\n",
+    "2:digits(0-9)\n",
+    "3:underscore(_)\n",
+    "#identifers cannot be started by a digit.\n",
+    "\n",
+    "identifiers cannot contain special character\n",
+    "identifier cannot be a keyword\n",
+    "identifier aare case senstive.\n",
+    "\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "e96bdf5a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['False',\n",
+       " 'None',\n",
+       " 'True',\n",
+       " '__peg_parser__',\n",
+       " 'and',\n",
+       " 'as',\n",
+       " 'assert',\n",
+       " 'async',\n",
+       " 'await',\n",
+       " 'break',\n",
+       " 'class',\n",
+       " 'continue',\n",
+       " 'def',\n",
+       " 'del',\n",
+       " 'elif',\n",
+       " 'else',\n",
+       " 'except',\n",
+       " 'finally',\n",
+       " 'for',\n",
+       " 'from',\n",
+       " 'global',\n",
+       " 'if',\n",
+       " 'import',\n",
+       " 'in',\n",
+       " 'is',\n",
+       " 'lambda',\n",
+       " 'nonlocal',\n",
+       " 'not',\n",
+       " 'or',\n",
+       " 'pass',\n",
+       " 'raise',\n",
+       " 'return',\n",
+       " 'try',\n",
+       " 'while',\n",
+       " 'with',\n",
+       " 'yield']"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Reserved word or keyword\n",
+    "import keyword\n",
+    "keyword.kwlist"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "aac08d65",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Datatype\n",
+    "int , float , complex , bool , str , bytes  bytearray"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "a27be63a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2133982603856\n",
+      "2133982603856\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=10\n",
+    "b=10\n",
+    "print(id(a))\n",
+    "print(id(b))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "37e52340",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 9,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "  = input()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "79e49de1",
+   "metadata": {},
+   "source": [
+    "#python3 would not provide backward competibility to python2.\n",
+    "#It python2 we have long datatype but in python3 we don't have any long datatype we can also handle long values using int datatype.\n",
+    "\n",
+    "#Representation of int datatype\n",
+    "1: Decimal form\n",
+    "2:Binary form\n",
+    "3: Octal form\n",
+    "4: Hexadecimal form\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "30f826fa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1080\n"
+     ]
+    }
+   ],
+   "source": [
+    "#decimal datatype -- 0-9\n",
+    "a=1080\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "13513e19",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "18\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Binary datatype   0,1\n",
+    "a=0b10010  \n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "df68b0fa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "342391\n"
+     ]
+    }
+   ],
+   "source": [
+    "#octal datatype   0-7\n",
+    "a=0O1234567\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "066d7eef",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20015998483678\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Hexadecimal 0-9 A-F\n",
+    "a = 0x1234567abcde\n",
+    "print(a)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "97093ab5",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0b1111\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Base Conversions\n",
+    "a=15\n",
+    "print(bin(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "32b13dae",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0o17\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=15\n",
+    "print(oct(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "c2687aaa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0xf\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=15\n",
+    "print(hex(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "7bfeae0e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "a=0x543acbde\n",
+    "print(type(a))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "d56df9a3",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (Temp/ipykernel_1228/1995626051.py, line 3)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  File \u001b[1;32m\"C:\\Users\\praty\\AppData\\Local\\Temp/ipykernel_1228/1995626051.py\"\u001b[1;36m, line \u001b[1;32m3\u001b[0m\n\u001b[1;33m    f=0b10110.010011\u001b[0m\n\u001b[1;37m             ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Float\n",
+    "#1:Exponential form\n",
+    "f=0b10110.010011\n",
+    "print(f)\n",
+    "#We cannot use other bases along with float"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "1e8599ba",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (Temp/ipykernel_1228/1669136263.py, line 3)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;36m  File \u001b[1;32m\"C:\\Users\\praty\\AppData\\Local\\Temp/ipykernel_1228/1669136263.py\"\u001b[1;36m, line \u001b[1;32m3\u001b[0m\n\u001b[1;33m    a=3+0b11j\u001b[0m\n\u001b[1;37m            ^\u001b[0m\n\u001b[1;31mSyntaxError\u001b[0m\u001b[1;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Complex number\n",
+    "#In the real part we can only use integer values  that can be either by decimal  octal binary and hexadecimal\n",
+    "#imaginary part id always in the form of decimal"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "86d153fd",
+   "metadata": {},
+   "source": [
+    "#Use of complex number: We can use complex datatype in scientific applications  and electrical engineering"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d6ab706a",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "boolean : True or false true is treated as 1 and false is treated as 0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "a1b2399c",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "ValueError",
+     "evalue": "bytes must be in range(0, 256)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "\u001b[1;32m~\\AppData\\Local\\Temp/ipykernel_1228/2283832959.py\u001b[0m in \u001b[0;36m<module>\u001b[1;34m\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[1;31m#bytes datatype\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0;32m      2\u001b[0m \u001b[0mx\u001b[0m \u001b[1;33m=\u001b[0m \u001b[1;33m[\u001b[0m\u001b[1;36m1\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;36m2\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;36m3\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;36m4\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;36m5\u001b[0m\u001b[1;33m,\u001b[0m\u001b[1;36m900\u001b[0m\u001b[1;33m]\u001b[0m              \u001b[1;31m#0-255\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[1;32m----> 3\u001b[1;33m \u001b[0my\u001b[0m \u001b[1;33m=\u001b[0m \u001b[0mbytes\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mx\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n\u001b[0m\u001b[0;32m      4\u001b[0m \u001b[0mprint\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0mtype\u001b[0m\u001b[1;33m(\u001b[0m\u001b[0my\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m)\u001b[0m\u001b[1;33m\u001b[0m\u001b[1;33m\u001b[0m\u001b[0m\n",
+      "\u001b[1;31mValueError\u001b[0m: bytes must be in range(0, 256)"
+     ]
+    }
+   ],
+   "source": [
+    "#bytes datatype\n",
+    "x = [1,2,3,4,5]              #0-255\n",
+    "y = bytes(x)\n",
+    "print(type(y))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "14234c26",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=10\n",
+    "b=10\n",
+    "#is operator is used for comparing memeory allocation\n",
+    "# == operator is used to check weather two elements are equal or not"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "e6a6f764",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2134063609488\n",
+      "2134063610288\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 43,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a=9860\n",
+    "b=9860\n",
+    "print(id(a))\n",
+    "print(id(b))\n",
+    "a is b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e06dd9af",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "a=10+5j\n",
+    "b=10+5j\n",
+    "print(id(a))\n",
+    "print(id(b))\n",
+    "a is b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5efc1519",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#bytes array\n",
+    "x = [1,2,3,4,5]\n",
+    "y = bytes"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "656721dd",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
